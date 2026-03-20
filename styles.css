@@ -1,0 +1,73 @@
+:root{
+  --accent:#6b5a4a;
+  --bg:#ffffff;
+  --muted:#757575;
+  --soft:#f6f4f2;
+  --dark:#0f1720;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
+}
+.site{
+  max-width:1100px;
+  margin:48px auto;
+  padding:36px;
+}
+.site-header{padding-bottom:8px}
+.brand h1{margin:0;font-size:1.6rem;color:var(--accent);font-weight:700}
+.tagline{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+
+.hero-2{display:flex;flex-direction:column;gap:18px;margin:18px 0}
+.hero-left img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.hero-right{display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:0.9rem;color:var(--muted);margin:0}
+.hero-name{font-size:2rem;margin:6px 0}
+.hero-intro{margin:6px 0;color:var(--muted)}
+.muted{color:var(--muted);font-size:0.95rem}
+
+.highlights{margin:28px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:transparent;border-radius:6px;padding:18px;border:1px solid rgba(15,15,15,0.04)}
+.card h3{margin:0 0 8px 0;font-size:1rem;color:var(--dark)}
+.card p{margin:0;color:var(--muted)}
+
+
+.content{margin-top:20px}
+.section-inner{display:flex;flex-direction:column;gap:20px}
+.content h2{font-size:1.1rem;margin:0 0 8px 0}
+.favorites ul{margin:6px 0 0 18px;color:var(--muted)}
+
+
+.artists{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.artist{background:#fff;border-radius:6px;overflow:hidden;border:1px solid rgba(15,15,15,0.04)}
+.artist img{width:100%;height:160px;object-fit:cover;display:block}
+.artist figcaption{padding:10px 12px;color:var(--dark);font-weight:600}
+
+.hobbies-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hobby-card{background:var(--soft);border-radius:8px;padding:12px;text-align:center;color:var(--muted);font-weight:600}
+
+.site-footer{margin-top:28px;border-top:1px solid rgba(15,15,15,0.04);padding-top:16px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-inner a{color:var(--accent)}
+
+@media(max-width:880px){
+  .cards{grid-template-columns:repeat(1,1fr)}
+  .artists{grid-template-columns:repeat(1,1fr)}
+  .hobbies-grid{grid-template-columns:repeat(1,1fr)}
+  .tiles{grid-template-columns:repeat(1,1fr)}
+  .hero-2{flex-direction:column}
+}
+
+@media(min-width:900px){
+  .hero-2{flex-direction:row}
+  .hero-left{flex:1;margin-right:24px}
+  .hero-right{flex:1}
+  .featured-inner{flex-direction:row}
+  .featured-image{flex:1;margin-right:18px}
+  .featured-copy{flex:1;display:flex;align-items:center}
+}
